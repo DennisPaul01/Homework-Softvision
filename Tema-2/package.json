@@ -1,0 +1,24 @@
+{
+  "name": "homework-softvision",
+  "version": "1.0.0",
+  "description": "To install : npm run install-server",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DennisPaul01/Tema-1-SV.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DennisPaul01/Tema-1-SV/issues"
+  },
+  "homepage": "https://github.com/DennisPaul01/Tema-1-SV#readme",
+  "dependencies": {
+    "express": "^4.18.1",
+    "nodemon": "^2.0.16"
+  }
+}
