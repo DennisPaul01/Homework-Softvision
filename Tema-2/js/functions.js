@@ -158,7 +158,7 @@ const addDigitsMethodThree = (num) => {
 };
 
 console.log(addDigitsMethodThree(1523));
-console.log(addDigitsMethodThree("1123789"));
+console.log(addDigitsMethodThree("112378a9"));
 
 //!EXERCISE 5
 //*Switch case
