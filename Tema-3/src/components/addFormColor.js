@@ -8,10 +8,12 @@ const AddFormColor = (props) => {
   const handleClick = () => {
     props.handleClick({ color });
   };
+
   return (
     <>
       <label className="form-label">Pick your gradient</label>
       <br></br>
+
       <input
         type="color"
         value={color}

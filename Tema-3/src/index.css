@@ -304,6 +304,18 @@ img {
   font-size: 20px;
 }
 
+.form-gradient-direction {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-direction-button {
+  padding: 10px 20px;
+  color: white;
+  background-color: #ffb63e;
+  border: none;
+}
 /*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
 /*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
 /* LOADING STYLE  */

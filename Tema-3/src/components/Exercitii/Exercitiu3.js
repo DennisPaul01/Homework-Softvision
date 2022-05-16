@@ -10,15 +10,18 @@ const Exercitiu3 = () => {
       color: "#111111",
     },
   ]);
+  const [directionGradient, setDirectionGradient] = useState("to right");
 
   // Scopul acestei functii este de a adauga culori noi in state (care randeaza componenta de fiecare data cand este modificat)
   // El contine valorile anterioare + noua valoare care este adaugata folosind componenta <AddFormColor /> care paseaza eventul folosind props
-
   const addGradient = (color) => {
+    console.log(color);
+    console.log(directionGradient);
     const newGradientColors = [...gradientColors];
     color.id = gradientColors.length;
     newGradientColors.push(color);
     setGradientColors(newGradientColors);
+    setDirectionGradient(directionGradient);
   };
 
   // Scopul acestei functii este de a scoate din state culorile care nu le mai dorim
@@ -44,7 +47,8 @@ const Exercitiu3 = () => {
   // Am folosit un if statement pentru a face un check in caz ca in state-ul nostru nu este nici o culoare adaugat, sau este doar una sigura si nu se poate forma gradientul
   let gradient;
   if (gradientColors.length > 1) {
-    gradient = `linear-gradient(to right, ${gradientColors
+    console.log(directionGradient);
+    gradient = `linear-gradient(${directionGradient}, ${gradientColors
       .map((color) => color.color)
       .join(", ")}`;
   } else if (gradientColors.length === 1) {
@@ -58,6 +62,32 @@ const Exercitiu3 = () => {
       <div className="box-title">
         <h5>Exercitiu 3</h5>
         <AddFormColor handleClick={addGradient}></AddFormColor>
+        <div className="form-gradient-direction">
+          <button
+            className="form-direction-button"
+            onClick={() => setDirectionGradient("to left")}
+          >
+            &#8592;
+          </button>
+          <button
+            className="form-direction-button"
+            onClick={() => setDirectionGradient("to top")}
+          >
+            &#8593;
+          </button>
+          <button
+            className="form-direction-button"
+            onClick={() => setDirectionGradient("to right")}
+          >
+            &#8594;
+          </button>
+          <button
+            className="form-direction-button"
+            onClick={() => setDirectionGradient("to bottom")}
+          >
+            &#8595;
+          </button>
+        </div>
       </div>
       <div className="box-colors">
         <div className="box-labels">{colorLabels}</div>
