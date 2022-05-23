@@ -24,8 +24,5 @@ To run:
 - npm run install
 - npm run server
 - npm run client 
-<<<<<<< HEAD
 
 
-=======
->>>>>>> 41d95377672b5c42b543203b57089643d8516bf9
