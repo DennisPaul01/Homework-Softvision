@@ -315,7 +315,17 @@ button {
   display: flex;
 }
 
-.message-form input {
+.message-form-name {
+  width: 100%;
+  background-color: #f5f7fb;
+  border: none;
+  outline: none;
+  padding: 5px;
+  color: #535353;
+  border-radius: 0px;
+  margin-bottom: 20px;
+}
+.message-form-text {
   width: 100%;
   background-color: #f5f7fb;
   border: none;
@@ -323,13 +333,14 @@ button {
   padding: 20px;
   color: #535353;
   border-radius: 50px;
+  margin-bottom: 20px;
 }
 .message-form button {
   border: none;
   margin-left: 20px;
   background-color: #3ba58a;
-  padding: 20px;
-  border-radius: 100%;
+  padding: 30px;
+  border-radius: 10px;
 }
 
 /*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/

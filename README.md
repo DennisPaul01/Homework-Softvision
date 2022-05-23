@@ -18,3 +18,11 @@ LIVE: https://tema-2-sv.netlify.app/
 To run: npm run start
 
 LIVE: https://tema-3-sv.netlify.app/
+
+# Tema 4
+To run: 
+- npm run install
+- npm run server
+- npm run client 
+
+

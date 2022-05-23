@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import Message from "./Message";
 import MessageForm from "./MessageForm";
 
-const ChatBox = ({ socket, dataUser }) => {
+const ChatBox = ({ socket }) => {
   const [allMessages, setAllMessages] = useState([]);
 
   // afisare timp pentru mesaje
@@ -12,24 +12,18 @@ const ChatBox = ({ socket, dataUser }) => {
     minute: "2-digit",
   });
 
-  // adaugare mesaje
-  const addMessage = (data) => {
-    console.log(data);
-    setAllMessages((prevState) => {
-      return [...prevState, data];
-    });
-  };
-
   useEffect(() => {
     socket.on("messageUser", (data) => {
-      addMessage(data);
+      setAllMessages((prevState) => {
+        return [...prevState, data];
+      });
     });
   }, []);
 
   // emitere catre client to server
-  const onSaveMessage = (dataMesaj) => {
-    socket.emit("messageUser", { ...dataUser, dataMesaj, currentTime });
-    socket.emit("newNotifaction", dataUser.name);
+  const onSaveMessage = (message) => {
+    socket.emit("messageUser", { ...message, currentTime });
+    socket.emit("newNotifaction", message.userName);
   };
 
   return (
@@ -39,19 +33,15 @@ const ChatBox = ({ socket, dataUser }) => {
           return (
             <Message
               key={`message-${index}`}
-              name={data.name}
+              name={data.userName}
               profilePicture={data.avatar}
-              message={data.dataMesaj}
+              message={data.message}
               time={data.currentTime}
             />
           );
         })}
       </div>
-      <MessageForm
-        sendMessageHandler={onSaveMessage}
-        socket={socket}
-        dataUser={dataUser}
-      />
+      <MessageForm sendMessageHandler={onSaveMessage} socket={socket} />
     </div>
   );
 };

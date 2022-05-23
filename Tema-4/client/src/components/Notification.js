@@ -7,7 +7,6 @@ const Notification = ({ socket }) => {
 
   useEffect(() => {
     socket.on("newNotifaction", (data) => {
-      console.log(data);
       setNotificationShow(true);
       setUserNotification(data);
     });
