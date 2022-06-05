@@ -26,3 +26,11 @@ To run:
 - npm run client 
 
 
+# Tema 5
+To run: 
+- npm run install
+- npm run server
+- npm run client 
+
+
+
