@@ -32,5 +32,10 @@ To run:
 - npm run server
 - npm run client 
 
+# Tema 6
+To run: 
+- npm run install
+- npm run server
+- npm run client 
 
 
