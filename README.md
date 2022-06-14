@@ -39,7 +39,10 @@ To run:
 - npm run client 
 
 
-# Tema 7 - https://github.com/DennisPaul01/Tema_7_SoftVision_Curs
+# Tema 7 
+
+https://github.com/DennisPaul01/Tema_7_SoftVision_Curs
+
 To run: 
 - npm run install
 - npm run server
